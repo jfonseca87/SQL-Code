@@ -1,0 +1,33 @@
+CREATE DATABASE Test
+
+GO
+
+USE Test
+
+GO
+
+CREATE TABLE Curso
+(
+	Id_Curso INT IDENTITY(1,1) PRIMARY KEY,
+	Nombre_Curso VARCHAR(100) NOT NULL
+)
+
+GO
+
+CREATE TABLE Alumno
+(
+	Id_Alumno INT IDENTITY(1,1) PRIMARY KEY,
+	Nombre_Alumno VARCHAR(50) NOT NULL,
+	Apellido_Alumno VARCHAR(50) NOT NULL
+)
+
+GO
+
+CREATE TABLE AlumnoHasCurso
+(
+	Alumno_Id INT,
+	Curso_Id INT, 
+	FOREIGN KEY (Alumno_Id) REFERENCES Alumno(Id_Alumno) ON DELETE CASCADE,
+	FOREIGN KEY (Curso_Id) REFERENCES Curso(Id_Curso) ON DELETE CASCADE
+)
+
