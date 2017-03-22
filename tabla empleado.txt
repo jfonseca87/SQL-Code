@@ -1,0 +1,28 @@
+CREATE TABLE Empleado (NroEmpleado int,
+	Nombre varchar(25),
+	Apellido varchar(25),
+	Cargo varchar(25),
+	NroJefe int,
+	CONSTRAINT PK_EMPLEADO PRIMARY KEY (NroEmpleado),
+	CONSTRAINT FK_JEFE FOREIGN KEY (NroJefe) REFERENCES Empleado)
+
+INSERT INTO Empleado VALUES (1, 'Carlos', 'Mendoza', 'Presidente', NULL)
+INSERT INTO Empleado VALUES (2, 'Marta', 'Prieto', 'Vice Presidente', 1)
+INSERT INTO Empleado VALUES (3, 'Victor', 'Mongelos', 'Gerente General', 1)
+INSERT INTO Empleado VALUES (4, 'Betty', 'Martinez', 'Gerente RRHH', 3)
+INSERT INTO Empleado VALUES (5, 'Marcos', 'Arce', 'Gerente Informatico', 3)
+INSERT INTO Empleado VALUES (6, 'Hugo', 'Zorrilla', 'Gerente de Ventas', 3)
+INSERT INTO Empleado VALUES (7, 'Marcela', 'Britoz', 'Gerente Comercial', 3)
+INSERT INTO Empleado VALUES (8, 'Carlota', 'Muñoz', 'Gerente de Operaciones', 3)
+INSERT INTO Empleado VALUES (9, 'Ricardo', 'Gallas', 'Atención al Cliente', 4)
+INSERT INTO Empleado VALUES (10, 'Mafalda', 'Quiñonez', 'Auxiliar Contable', 7)
+INSERT INTO Empleado VALUES (11, 'Cristian', 'Leite', 'Telemaketer', 4)
+INSERT INTO Empleado VALUES (12, 'Osvaldo', 'Acuña', 'Team Leader', 8)
+INSERT INTO Empleado VALUES (13, 'Consuelo', 'Vargas', 'Supervisor', 6)
+INSERT INTO Empleado VALUES (14, 'Mateo', 'Dusrte', 'Supervisor de Seguridad', 4)
+INSERT INTO Empleado VALUES (15, 'Miguel', 'Gllvan', 'Guardia de Seguridad', 14)
+INSERT INTO Empleado VALUES (16, 'Carlos', 'Troche', 'Vendedor', 6)
+INSERT INTO Empleado VALUES (17, 'Martina', 'Vera', 'Vendedor', 6)
+INSERT INTO Empleado VALUES (18, 'Jose', 'Troche', 'Vendedor', 6)
+INSERT INTO Empleado VALUES (19, 'Bruno', 'Zarza', 'Jefe de Marketing', 7)
+INSERT INTO Empleado VALUES (20, 'Ana', 'Carreras', 'Auxiliar Contable', 7)
